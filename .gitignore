@@ -1,0 +1,19 @@
+# --------  FICHIERS DOSSIERS IGNORES   ---------
+#-----------------------------------------------
+
+#.env/
+__pycache__
+src/static/img/img_site/origine
+src/static/img/hd
+src/static/csv
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+{% extends "generic.html" %}
+{% block main %}
+  <section class="main">
+    {% load static %}
+   
+  <div class="top"><img src="{% static 'img/img_site/accueil_icones.jpg'  %}" alt=""/>
+  </div> 
+  <div class="bot">
+    <h1> Anomalies signalées dans ma rue -Paris Data</h1> 
+      <p>Anomalies signalées par les contributeurs-utilisateurs de l'application Dans Ma Rue sur 13 mois glissants Depuis 2012 la ville de Paris a lancé une application mobile de signalements des anomalies sur l'espace public appelée " Dans Ma Rue".
+Plus d'informations Signaleurs « Dans ma rue » : agir sur l’espace public
+Dans ce jeu de données vous retrouvez l'ensemble des anomalies signalées de J-16 mois à J - 3 mois.
+Les données antérieures sont disponibles dans le jeu de données historique : Dans Ma Rue - Historique - Anomalies signalées 
+      </p>
+  </div>
+  
+
+  <div id="wrap" class="col-12">
+        <ul class="navbars">
+            <li>
+                <a href="#">Choix arrondissement</a>
+                <ul>
+                    {% load static %}
+                    <li><a href="{% static 'img/q1/c_arrondissement_q1.png' %}" onclick="affiche(this.href);return false;">Q 1 2020 et 2021 </a></li>
+                    <li><a href="{% static 'img/q3/c_anomalie_q3.png' %}" onclick="affiche(this.href);return false;">Q 3 min et max sur 2 ans</a></li>
+
+                </ul>
+            </li>
+        </ul>
+        {% load static %}
+        <div class="camemb d-flex justify-content-center">
+            <img id="refImg" alt="Image" src="../static/img/bg_paris2.jpg" class="col-8" />
+        </div> 
+
+
+
+    </div>
+
+    <script type="text/javascript">
+
+     
+
+
+  </script>
+{% endblock %}
+
+  
+
+

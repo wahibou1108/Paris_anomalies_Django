@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+/* font-family: 'Gloria Hallelujah', cursive; */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Gloria Hallelujah', cursive;
+    list-style: none;
+}
+body {
+    /* background: url(../img/img_paris_bleu.jpg) center/cover; */
+    height: 200vh;
+            /* 100 virtual height donc 100% de l'ecran  */
+
+}
+
+a{
+  text-decoration: none !important;
+}
+/* ************ HAUT HEADER *************** */
+
+
+.img_icone_menu{ 
+  width: 10%;
+  position:relative;
+    left:0px;
+}
+.item-menu{
+  padding: 0;
+  width: 23%;
+  margin-left: 3em;
+  margin-top : 2em;
+  margin-bottom: 2em;
+}
+nav{
+    display:flex;
+    justify-content: space-between;
+
+    /* justify-content: center; */
+    align-items: center;
+    /* border-bottom: 5px solid #398AB9 */
+}
+nav a img {
+    height: 30px;
+    display: flex;
+}
+nav a{
+    /* text-transform: uppercase; */
+    color: #1C658C;
+    /* text-shadow: rgba(63, 32, 32, 0.493); */
+    font-size: 1rem;
+    text-decoration: none;
+    /* margin-right: 3px; */
+}
+
+/* ************ HAUT IMAGE *************** */
+header{
+  background-image: url("/static/img/img_paris_bleu.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 2em
+}
+.icon_accueil {
+  width: 2%;
+  margin: 0.7em;
+}
+.img_icone_menu{ 
+  width: 20%;
+  
+}
+.item-menu{
+  padding: 0;
+  width: 23%;
+  margin-left: 3em;
+  margin-top : 2em;
+  margin-bottom: 2em;
+}
+/* navigation de chaque page*/
+.nav_page li {
+  border-bottom: 1.2px solid #000;
+  margin-left: 2em; 
+  border-radius: 2px;
+}
+
+/* ********** IMAGE INTRODUCTION ******** */
+.main {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main .top img {
+    width: 20vw;
+}
+.main .bot {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+/* TypE2 html */
+.b-t{
+  border-top : 2px solid;
+}
+
+/* Stylisez l'arrière-plan du menu pour qu'il change la couleur lorsqu'il est en survol. */
+.navbar li:hover, a:hover {
+    background: #398ab975;
+    border-bottom: 1px solid #EEEEEE;
+    color: #EEEEEE;
+
+}
+
+.panel{
+  background: linear-gradient(to right, #2980b9, #2c3e50);
+  padding: 0;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 0 5px rgba(0,0,0,0.05),0 0 0 10px rgba(0,0,0,0.05);
+}
+.panel .panel-heading{
+  padding: 20px 15px;
+  border-radius: 10px 10px 0 0;
+  margin: 0;
+}
+.panel .panel-heading .title{
+  color: #fff;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 40px;
+  margin: 0;
+}
+.panel .panel-heading .btn{
+  color: rgba(255,255,255,0.5);
+  background: transparent;
+  font-size: 16px;
+  /* text-transform: capitalize; */
+  border: 2px solid #fff;
+  border-radius: 50px;
+  transition: all 0.3s ease 0s;
+}
+.panel .panel-heading .btn:hover{
+  color: #fff;
+  text-shadow: 3px 3px rgba(255,255,255,0.2);
+}
+.panel .panel-heading .form-control{
+  color: #fff;
+  background-color: transparent;
+  width: 35%;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+}
+.panel .panel-heading .form-control:focus{
+  background-color: rgba(255,255,255,0.2);
+  box-shadow: none;
+  outline: none;
+}
+.panel .panel-heading .form-control::placeholder{
+  color: rgba(255,255,255,0.5);
+  font-size: 15px;
+  font-weight: 500;
+}
+.panel .panel-body{ padding: 0; }
+.panel .panel-body .table thead tr th{
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 12px;
+  border: none;
+}
+.panel .panel-body .table tbody tr td{
+  color: #fff;
+  font-size: 15px;
+  padding: 10px 12px;
+  vertical-align: middle;
+  border: none;
+}
+.panel .panel-body .table tbody tr:nth-child(even){ background-color: rgba(255,255,255,0.05); }
+.panel .panel-body .table tbody .action-list{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.panel .panel-body .table tbody .action-list li{
+  display: inline-block;
+  margin: 0 5px;
+}
+.panel .panel-body .table tbody .action-list li a{
+  color: #fff;
+  font-size: 15px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease 0s;
+}
+.panel .panel-body .table tbody .action-list li a:hover{ text-shadow: 3px 3px 0 rgba(255,255,255,0.3); }
+.panel .panel-body .table tbody .action-list li a:before,
+.panel .panel-body .table tbody .action-list li a:after{
+  content: attr(data-tip);
+  color: #fff;
+  background-color: #111;
+  font-size: 12px;
+  padding: 5px 7px;
+  border-radius: 4px;
+  display: none;
+  transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  top: -32px;
+  transition: all 0.3s ease 0s;
+}
+.panel .panel-body .table tbody .action-list li a:after{
+  content: '';
+  height: 15px;
+  width: 15px;
+  padding: 0;
+  border-radius: 0;
+  transform: translateX(-50%) rotate(45deg);
+  top: -18px;
+  z-index: -1;
+}
+.panel .panel-body .table tbody .action-list li a:hover:before,
+.panel .panel-body .table tbody .action-list li a:hover:after{
+  display: block;
+}
+.panel .panel-footer{
+  color: #fff;
+  background-color: transparent;
+  padding: 15px;
+  border: none;
+}
+.panel .panel-footer .col{ line-height: 35px; }
+.pagination{ margin: 0; }
+.pagination li a{
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid transparent;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 31px;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  margin: 0 3px;
+  border-radius: 50px;
+  transition: all 0.3s ease 0s;
+}
+.pagination li a:hover{
+  color: #fff;
+  background-color: transparent;
+  border-color: rgba(255,255,255,0.2);
+}
+.pagination li a:focus,
+.pagination li.active a,
+.pagination li.active a:hover{
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+}
+.pagination li:first-child a,
+.pagination li:last-child a{
+  border-radius: 50%;
+}
+@media only screen and (max-width:767px){
+  .panel .panel-heading .title{
+      text-align: center;
+      margin: 0 0 10px;
+  }
+  .panel .panel-heading .btn_group{ text-align: center; }
+}
+
+.div1{ 
+  background-color: #000 !important;
+}
+
+.div2{ 
+  background-color: yellow !important;
+}
+/* ********** IMAGE GRAPHIQUES ******** */
+
+
+
+
+.camemb {
+    display:flex;
+    justify-content: center;
+    box-shadow: 0px 5px 50px rgba(125, 177, 255, 0.671)
+}
+
+.camemb img {
+    width: 70vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

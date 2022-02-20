@@ -1,0 +1,12 @@
+body {
+
+}
+.nav {
+    background: #00ABA9;
+}
+#mapid{
+    border:1px solid black;
+    height:70vh;
+    width:90vw
+    
+}

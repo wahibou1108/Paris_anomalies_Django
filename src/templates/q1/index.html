@@ -1,0 +1,72 @@
+{% extends 'generic.html' %}
+{% load static %}
+{% block title %}arrondissement{% endblock %}
+{% block titrepage %} Question 1 {% endblock %}
+{% block titreQuestion %}Quels sont les années pour lesquels il y a le plus / le moins d'anomalies signalées, par arrondissement ?
+{% endblock %}
+{% block main %}
+<section>{% load static %}
+    <article><img src="{% static 'img/img_site/bg_paris6.png' %}" alt="" class="w-100"></article>
+    <article>    
+</section>
+<div class="d-flex justify-content-center">
+    <section class="nav_page col-3 mx-5">
+        <h2 class="text-center fs-4">Les arrondissements</h2>
+        <ul>
+            {% for cle, valeur in table.items %}
+                <li class="d-flex justify-content-center my-2">
+                    <a href="{% url 'arrondissement' cle %}" class="">Arrondissement {{ cle |add:1 }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+    <section class="col-9">
+            <h5></h5>
+            <p></p>
+        </article>
+        <article class="d-flex justify-content-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-1 col-md-10">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-sm-12 col-xs-12 text-right text-center">
+                                        <h4 class="title">Les nombres d'anomalies signalées en 2020 et 2021 dans les arrondissements de Paris </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr class="text-center">
+                                            <th>Arrondissement</th>
+                                            <th>Anomalies <br> signalées en 2020</th>
+                                            <th>Anomalies <br> signalées en 2021</th>
+                                            <th>Min</th>
+                                            <th>Max</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for key, value in table.items %}
+                                            <tr class="text-center">
+                                                <td>{{ value.arrondissement }}</td>
+                                                <td>{{ value.2020 }}</td>
+                                                <td>{{ value.2021 }}</td>
+                                                <td>{{ value.min }}</td>
+                                                <td>{{ value.max }}</td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+</div>
+
+{% endblock %}

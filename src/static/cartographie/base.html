@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset="UTF-8">
+   <title>GROUPE_3 EN FORCE</title>
+   <link rel="stylesheet" href="libs/leaflet.css" />
+   <link rel="stylesheet" href="css/style.css">
+   <style>
+
+   </style>
+</head>
+<body>
+
+  
+
+   <div id="mapid"></div>
+
+   <script src="libs/leaflet.js"></script>
+   <script src="js/app.js"></script>
+   <script src="data/data.js"></script>
+   <!-- importation -->
+   <script>
+   
+   let centre = {lat: 48.8731, lng: 2.3242};
+   // centrer la carte
+
+   let carteNB = L.tileLayer(layerSatellite.url, { attribution:
+      layerSatellite.attribution });
+   let carteCOUL = L.tileLayer(layerOSM.url, { attribution:
+       layerOSM.attribution });
+   // pour mettre plan ou satellite
+   
+
+   let lesanomalies = L.layerGroup();
+   for (let anomalie of anomalies) {
+   L.marker(anomalie, {   
+   icon: markColor('red')
+   })
+   .bindPopup(anomalie.nom)
+   .addTo(lesanomalies);   
+   }
+
+   let lesanomalies1 = L.layerGroup();
+   for (let anomalie1 of anomalies1) {
+   L.marker(anomalie1, {   
+   icon: markColor('red')
+   })
+   .bindPopup(anomalie1.nom)
+   .addTo(lesanomalies1);   
+   }
+
+   let lesanomalies2 = L.layerGroup();
+   for (let anomalie2 of anomalies2) {
+   L.marker(anomalie2, {   
+   icon: markColor('red')
+   })
+   .bindPopup(anomalie2.nom)
+   .addTo(lesanomalies2);   
+   }
+
+   let lesanomalies3 = L.layerGroup();
+   for (let anomalie3 of anomalies3) {
+   L.marker(anomalie3, {   
+   icon: markColor('red')
+   })
+   .bindPopup(anomalie3.nom)
+   .addTo(lesanomalies3);   
+   }
+
+   let lesanomalies4 = L.layerGroup();
+   for (let anomalie4 of anomalies4) {
+   L.marker(anomalie4, {   
+   icon: markColor('red')
+   })
+   .bindPopup(anomalie4.nom)
+   .addTo(lesanomalies4);   
+   }
+
+   let lesanomalies5 = L.layerGroup();
+   for (let anomalie5 of anomalies5) {
+   L.marker(anomalie5, {   
+   icon: markColor('red')
+   })
+   .bindPopup(anomalie5.nom)
+   .addTo(lesanomalies5);   
+   }
+
+   let lesanomalies6 = L.layerGroup();
+   for (let anomalie6 of anomalies6) {
+   L.marker(anomalie6, {   
+   icon: markColor('red')
+   })
+   .bindPopup(anomalie6.nom)
+   .addTo(lesanomalies6);   
+   }
+
+   let lesanomalies7 = L.layerGroup();
+   for (let anomalie7 of anomalies7) {
+   L.marker(anomalie7, {   
+   icon: markColor('red')
+   })
+   .bindPopup(anomalie7.nom)
+   .addTo(lesanomalies7);   
+   }
+
+   let lesanomalies8 = L.layerGroup();
+   for (let anomalie8 of anomalies8) {
+   L.marker(anomalie8, {   
+   icon: markColor('red')
+   })
+   .bindPopup(anomalie8.nom)
+   .addTo(lesanomalies8);   
+   }
+
+   let lesanomalies9 = L.layerGroup();
+   for (let anomalie9 of anomalies9) {
+   L.marker(anomalie9, {   
+   icon: markColor('red')
+   })
+   .bindPopup(anomalie9.nom)
+   .addTo(lesanomalies9);   
+   }
+
+   let lesanomalies01 = L.layerGroup();
+   for (let anomalie01 of anomalies01) {
+   L.marker(anomalie01, {   
+   icon: markColor('blue')
+   })
+   .bindPopup(anomalie01.nom)
+   .addTo(lesanomalies01);   
+   }
+
+   let lesanomalies11 = L.layerGroup();
+   for (let anomalie11 of anomalies11) {
+   L.marker(anomalie11, {   
+   icon: markColor('blue')
+   })
+   .bindPopup(anomalie11.nom)
+   .addTo(lesanomalies11);   
+   }
+
+   let lesanomalies21 = L.layerGroup();
+   for (let anomalie21 of anomalies21) {
+   L.marker(anomalie21, {   
+   icon: markColor('blue')
+   })
+   .bindPopup(anomalie21.nom)
+   .addTo(lesanomalies21);   
+   }
+
+   let lesanomalies31 = L.layerGroup();
+   for (let anomalie31 of anomalies31) {
+   L.marker(anomalie31, {   
+   icon: markColor('blue')
+   })
+   .bindPopup(anomalie31.nom)
+   .addTo(lesanomalies31);   
+   }
+
+   let lesanomalies41 = L.layerGroup();
+   for (let anomalie41 of anomalies41) {
+   L.marker(anomalie41, {   
+   icon: markColor('blue')
+   })
+   .bindPopup(anomalie41.nom)
+   .addTo(lesanomalies41);   
+   }
+
+   let lesanomalies51 = L.layerGroup();
+   for (let anomalie51 of anomalies51) {
+   L.marker(anomalie51, {   
+   icon: markColor('blue')
+   })
+   .bindPopup(anomalie51.nom)
+   .addTo(lesanomalies51);   
+   }
+
+   let lesanomalies61 = L.layerGroup();
+   for (let anomalie61 of anomalies61) {
+   L.marker(anomalie61, {   
+   icon: markColor('blue')
+   })
+   .bindPopup(anomalie61.nom)
+   .addTo(lesanomalies61);   
+   }
+
+   let lesanomalies71 = L.layerGroup();
+   for (let anomalie71 of anomalies71) {
+   L.marker(anomalie71, {   
+   icon: markColor('blue')
+   })
+   .bindPopup(anomalie71.nom)
+   .addTo(lesanomalies71);   
+   }
+
+   let lesanomalies81 = L.layerGroup();
+   for (let anomalie81 of anomalies81) {
+   L.marker(anomalie81, {   
+   icon: markColor('blue')
+   })
+   .bindPopup(anomalie81.nom)
+   .addTo(lesanomalies81);   
+   }
+
+   let lesanomalies91 = L.layerGroup();
+   for (let anomalie91 of anomalies91) {
+   L.marker(anomalie91, {   
+   icon: markColor('blue')
+   })
+   .bindPopup(anomalie91.nom)
+   .addTo(lesanomalies91);   
+   }
+
+   let map = L.map(`mapid`, {
+      center: centre,
+      zoom: 12,
+      layers: [carteCOUL,lesanomalies,lesanomalies01,lesanomalies1,lesanomalies11,lesanomalies2,lesanomalies21,lesanomalies3,lesanomalies31,lesanomalies4,lesanomalies41,lesanomalies5,lesanomalies51,lesanomalies6,lesanomalies61,lesanomalies7,lesanomalies71,lesanomalies8,lesanomalies81,lesanomalies9,lesanomalies91]
+   });
+
+   let controlerCarte = {
+      "couleur":carteCOUL,
+      "satellite": carteNB
+   }
+   let controlerMarqueurs = {
+      
+      "Anomalies Max activités commerciales et professionnelles 2020 <img src = 'img/marker-red.svg' width=10>":
+      lesanomalies,
+      "Anomalies Min activités commerciales et professionnelles 2020 <img src = 'img/marker-blue.svg' width=10>":
+      lesanomalies01,
+
+      "Anomalies Max Arbres, végétaux et animaux 2020 <img src = 'img/marker-red.svg' width=10>":
+      lesanomalies1,
+      "Anomalies Min Arbres, végétaux et animaux 2020 <img src = 'img/marker-blue.svg' width=10>":
+      lesanomalies11,
+
+      "Anomalies Max auto 2020 <img src = 'img/marker-red.svg' width=10>":
+      lesanomalies2,
+      "Anomalies Min auto 2020 <img src = 'img/marker-blue.svg' width=10>":
+      lesanomalies21,
+
+      "Anomalies Max eau <img src = 'img/marker-red.svg' width=10>":
+      lesanomalies3,
+      "Anomalies Min eau <img src = 'img/marker-blue.svg' width=10>":
+      lesanomalies31,
+
+      "Anomalies Max éclairage et électricité <img src = 'img/marker-red.svg' width=10>":
+      lesanomalies4,
+      "Anomalies Min éclairage et électricité <img src = 'img/marker-blue.svg' width=10>":
+      lesanomalies41,
+
+      "Anomalies Max grafitis <img src = 'img/marker-red.svg' width=10>":
+      lesanomalies5,
+      "Anomalies Min grafitis <img src = 'img/marker-blue.svg' width=10>":
+      lesanomalies51,
+
+      "Anomalies Max mobilier urbain <img src = 'img/marker-red.svg' width=10>":
+      lesanomalies6,
+      "Anomalies Min mobilier urbain <img src = 'img/marker-blue.svg' width=10>":
+      lesanomalies61,
+
+      "Anomalies Max objet abondonnés <img src = 'img/marker-red.svg' width=10>":
+      lesanomalies7,
+      "Anomalies Min objet abondonnés <img src = 'img/marker-blue.svg' width=10>":
+      lesanomalies71,
+
+      "Anomalies Max propreté <img src = 'img/marker-red.svg' width=10>":
+      lesanomalies8,
+      "Anomalies Min propreté <img src = 'img/marker-blue.svg' width=10>":
+      lesanomalies81,
+
+      "Anomalies Max voirie <img src = 'img/marker-red.svg' width=10>":
+      lesanomalies9,
+      "Anomalies Min voirie <img src = 'img/marker-blue.svg' width=10>":
+      lesanomalies91,
+
+     
+   }
+   L.control.layers(controlerCarte, controlerMarqueurs).addTo(map);
+
+   // L.marker(centre)
+   // .addTo(map)
+   // .bindPopup("centre");
+
+   // L.marker(piscine)
+   // .addTo(map)
+   // .bindPopup("la piscine");
+   
+   // let markerBoiselle = 
+   // L.marker([48.9083, 2.2403])
+   // .addTo(map);
+   // markerBoiselle.bindPopup("Square Boiselle")
+
+   // let icoRed = L.icon({
+   //    iconUrl: 'img/marker-red.svg',
+   //    iconSize: [25, 41],
+   //    iconAnchor: [12, 41],
+   //    popupAnchor: [0, -41]
+   // });
+   //blue,green,yellow
+   // let groupeMarqueurs = [];
+
+   // for (let jardin of jardins) {
+   //    let m = L.marker(jardin, {   
+   //       icon: markColor('red')
+   //    }).bindPopup(jardin.nom);
+   //    groupeMarqueurs.push(m);   
+   // }
+   // for (let sportif of sportifs) {
+   //    let m = L.marker(sportif, {   
+   //       icon: markColor('green')
+   //    }).bindPopup(sportif.nom);
+   //    groupeMarqueurs.push(m);   
+   // }
+   // let groupe = L.featureGroup(groupeMarqueurs).addTo(map);
+
+   // map.fitBounds(groupe.getBounds());
+   
+
+   // L.circleMarker([48.9078, 2.2475],{
+   //    radius:50,
+   //    color: '#FF8C00',
+   //    fillColor: '#00FF8C',
+   //    weight:4
+   // })
+   // .addTo(map)
+
+   // .bindPopup("l'Angle de la rue");
+   // let div =L.divIcon({
+   //    html:'<p>salut les enfants</p>',
+   //    iconSize: [100,50]
+   // });
+   // L.marker([48.9088, 2.2514],  {
+   //    icon: div
+   // }).addTo(map)
+   </script>
+
+</body>
+</html>

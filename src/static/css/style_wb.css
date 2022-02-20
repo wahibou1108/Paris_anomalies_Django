@@ -1,0 +1,85 @@
+/* ************ Menu déroulant *************** */
+/* main{
+    min-height: 40vh;
+} */
+
+
+.navbars{
+    height: 15%;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+}
+.navbars li {
+    height: auto;
+    width: 180px;
+    float: left;
+    text-align: center;
+    list-style: none;
+    font-size: 0.9em ;
+    background: #398AB9;
+    border-bottom: 1px solid #EEEEEE;
+
+}
+.navbars a {
+    padding: 5px 0;
+    text-decoration: none;
+    color: #EEEEEE;
+    display: block;
+}
+/* Stylisez l'arrière-plan du menu pour qu'il change la couleur lorsqu'il est en survol. */
+.navbars li:hover, a:hover {
+    background: #398ab975;
+    border-bottom: 1px solid #EEEEEE;
+    color: #EEEEEE;
+
+}
+/* Ajoutez un style pour masquer le menu déroulant, et un autre style pour l'afficher lorsqu'un pointeur de sourit est placé sur l'élément principal du menu. */
+.navbars li ul {
+    display: none;
+    height: auto;
+}
+.navbars li:hover ul {
+    display: block;
+}
+/* Stylisez le menu déroulant. */
+.navbars li ul li {
+    background: #398AB9;
+}
+/* Changez les bordures, pour créer un effet du menu principal. */
+.navbars li ul li a {
+    border-bottom: 1px solid #D8D2CB;
+}
+.navbars li ul li a:hover {
+    background-color: #D8D2CB;
+    color: #398AB9;
+}
+
+/* ********** IMAGE GRAPHIQUES ******** */
+
+
+
+
+.camemb {
+    display:flex;
+    justify-content: center;
+    box-shadow: 0px 5px 50px rgba(125, 177, 255, 0.671);
+    min-height: 20vh;
+}
+
+/* .camemb img {
+    width: 50vw;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,98 @@
+{% extends 'generic.html' %}
+{% block title %}TYPE D'anomalie par mois{% endblock %}
+{% block titrepage %} Question 2 {% endblock %}
+{% block titreQuestion %}Quels sont les mois pour lesquels il y a le plus / le moins d’anomalie signalées, par type d’anomalie ?
+{% endblock %}
+{% block main %}
+{% load static %}
+<li><a href="{% url 'index_q2' %}">RETOUR</a></li>
+<div class="d-flex justify-content-center mt-5">    
+    <!-- Les graphiques -->
+    <section class="col-9"> 
+            <!-- Année 2020 -->
+        <article>
+            <h2 class="text-center">{% for key, data in ligne_2020.items %}{{ data.type_declaration }}{% endfor %}</h2>
+            {% load static %}
+            <div class="d-flex align-items-center col-12">
+                <div class="d-flex col-8">
+                    <img src="{% static 'img/q2/'|add:h_img_2020 %}" alt="2020" class="col-6">
+                    <img src="{% static 'img/q2/'|add:h_img_min_2020 %}" alt="max" class="col-6"> 
+                </div>
+                
+                <ul class="mx-1 fs-6">
+                <h5 class="text-center">2020</h5>
+
+                    {% for key, data in ligne_2020.items %}
+        
+                        <li>Min: {{ data.valeur_min }} réalisés au mois de
+                            {% for cle, mois in dict_mois.items %}   
+                               {% if cle ==  data.min_mois %}
+                                    {{ mois|lower }}
+                                {% endif %}
+                            {% endfor %}
+                        </li>
+                        <li>Max: {{ data.valeur_max }} réalisés au mois de 
+                            {% for cle, mois in dict_mois.items %}   
+                               {% if cle ==  data.max_mois %}
+                                    {{ mois }}
+                                {% endif %}
+                            {% endfor %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </article>
+        <!-- Annee 2021 -->
+        <article class="mt-3 b-t pt-2">     
+                 <!-- titre -->
+            
+            <div class="d-flex align-items-center">
+               
+                <!-- graph en semestre -->
+                <div class="d-flex flex-wrap col-8">
+                    <div class="col-6"> 
+                        <h3 class="fs-6 text-center">Janvier à avril</h3>
+                        <img src="{% static 'img/q2/'|add:h_img_2021_sem_1 %}" alt="sem 1" class="col-12">
+                    </div>
+                    <div class="col-6"> 
+                        <h3 class="fs-6 text-center">Mai à août</h3>
+                        <img src="{% static 'img/q2/'|add:h_img_2021_sem_2 %}" alt="sem 2">
+                    </div>
+                    <div class="col-6"> 
+                        <h3 class="fs-6 text-center">Semptembre à octobre</h3>
+                        <img src="{% static 'img/q2/'|add:h_img_2021_sem_3 %}" alt="sem 3">
+                    </div>
+                    <div class="col-6"> 
+                        <h3 class="fs-6 text-center">Min/Max</h3>
+                        <img src="{% static 'img/q2/'|add:h_img_min_2021 %}" alt="max" class="col-12">
+                    </div>
+                </div>
+                 <!--  description min et max -->
+                 <ul class="mx-1 fs-6">
+                    <h5 class="text-center">2021</h5>
+                    {% for key, data in ligne_2021.items %}
+        
+                        <li>Min: {{ data.valeur_min }} réalisés au mois de
+                            {% for cle, mois in dict_mois.items %}   
+                               {% if cle ==  data.min_mois %}
+                                    {{ mois|lower }}
+                                {% endif %}
+                            {% endfor %}
+                        </li>
+                        <li>Max: {{ data.valeur_max }} réalisés au mois de 
+                            {% for cle, mois in dict_mois.items %}   
+                               {% if cle ==  data.max_mois %}
+                                    {{ mois }}
+                                {% endif %}
+                            {% endfor %}
+                        </li>
+                    {% endfor %}
+                </ul>
+                
+                
+                
+            </div>
+        </article>
+    </section>
+</div>
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends 'generic.html' %}
+{% load static %}
+{% block title %}TYPE D'anomalie par arrondissement{% endblock %}
+{% block titrepage %} Question 3 {% endblock %}
+{% block titreQuestion %}Quel(s) arrondissement(s) comportent le plus / le moins d’anomalies signalées, par type d’anomalie ?
+{% endblock %}
+{% block main %}
+<div class="d-flex justify-content-center mt-5">
+    <section class="nav_page col-3 mx-5">
+        
+        <h2 class="text-center fs-4">Différents types d'anomalies</h2>
+        <ul class="fs-6">
+            {% for key,i in d.items %}    
+                  <li class="text-center my-2" ><a href="{% url 'typeQ3' key %}" >{{ i.type_declaration }}</a></li>
+
+            {% endfor %}
+        </ul>
+    </ul>
+</section>
+<section class="col-9">
+        
+    </article>
+    <article class="d-flex justify-content-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-1 col-md-10">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-sm-12 col-xs-12 text-right text-center">
+                                    <h4 class="title">Les nombres d'anomalies signalées en 2020 et 2021 dans les arrondissements de Paris </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr class="text-center">
+                                        <th>type_declaration</th>
+                                     {% for arrondissement in arrondissements %}
+                                        <th>{{ arrondissement }}</th>
+                                     {% endfor %}
+                                        <th>Min</th>
+                                        <th>Max</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for key,i in d.items %}
+                                        <tr>
+                                            <td>{{ i.type_declaration }}</td>
+                                            <td>{{ i.1 }}</td>
+                                            <td>{{ i.2 }}</td>
+                                            <td>{{ i.3 }}</td>
+                                            <td>{{ i.4 }}</td>
+                                            <td>{{ i.5 }}</td>
+                                            <td>{{ i.6 }}</td>
+                                            <td>{{ i.7 }}</td>
+                                            <td>{{ i.8 }}</td>
+                                            <td>{{ i.9 }}</td>
+                                            <td>{{ i.10 }}</td>
+                                            <td>{{ i.11 }}</td>
+                                            <td>{{ i.12 }}</td>
+                                            <td>{{ i.13 }}</td>
+                                            <td>{{ i.14 }}</td>
+                                            <td>{{ i.15 }}</td>
+                                            <td>{{ i.16 }}</td>
+                                            <td>{{ i.17 }}</td>
+                                            <td>{{ i.18 }}</td>
+                                            <td>{{ i.19 }}</td>
+                                            <td>{{ i.20 }}</td>
+                                            <td>{{ i.min }}</td>
+                                            <td>{{ i.max }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>   
+</div>
+<div class="mt-5" align="center">
+    {% load static %}
+    <iframe class="" src="{% static 'cartographie/base.html'%}" width="800" height="800"></iframe>
+</div>     
+{% endblock %}
+    

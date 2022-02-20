@@ -1,0 +1,143 @@
+{% extends 'generic.html' %}
+{% load static %}
+{% block title %}TYPE D'anomalie par mois{% endblock %}
+{% block titrepage %} Question 2 {% endblock %}
+{% block titreQuestion %}Quels sont les mois pour lesquels il y a le plus / le moins d'anomalies signalées, par type d'anomalie ?
+{% endblock %}
+{% block main %}
+<div class="d-flex justify-content-center mt-5">
+    <section class="nav_page col-3 mx-5">
+        <h2 class="text-center fs-4">Différents types d'anomalies</h2>
+        <ul>
+            {% for cle, valeur in table_2020.items %}
+                    <li class="d-flex justify-content-center my-2">
+                        <a href="{% url 'typeQ2' cle %}" class="text-center">{{ valeur.type_declaration }}</a>
+                    </li>
+            {% endfor %}
+        </ul>
+    </section>
+
+<div>
+    
+    <!-- Table annee 2020 -->
+    <section class="col-12 mb-3">
+
+        <article class=" justify-content-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-1 col-md-10">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-sm-12 col-xs-12 text-right text-center">
+                                        <h4 class="title">Les nombres d'anomalies signalées en 2020 dans les arrondissements de Paris </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr class="text-center">
+
+                                            <th>type_declaration</th>
+                                                <th>Septembre</th>
+                                                <th>Octobre</th>
+                                                <th>Novembre</th>
+                                                <th>Décembre</th>
+                                                <th>Min</th>
+                                                <th>Max</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for key,i in table_2020.items %}
+                                            <tr>
+                                                <td>{{ i.type_declaration }}</td>
+                                                <td>{{ i.9 }}</td>
+                                                <td>{{ i.10 }}</td>
+                                                <td>{{ i.11 }}</td>
+                                                <td>{{ i.12 }}</td>
+                                                <td>{{ i.valeur_min }}</td>
+                                                <td>{{ i.valeur_max }}</td>
+
+                                            
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section> 
+
+    <!-- Table annee 2021 -->
+
+    <section class="col-12 mt-5">
+        </article>
+        <article class="justify-content-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-1 col-md-10">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-sm-12 col-xs-12 text-right text-center">
+                                        <h4 class="title">Les nombres d'anomalies signalées en 2021 dans les arrondissements de Paris </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr class="text-center">
+                                            <th>type_declaration</th>
+                                            <th>Javrier</th>
+                                            <th>Février</th>
+                                            <th>Mars</th>
+                                            <th>Avril</th>
+                                            <th>Mai</th>
+                                            <th>Juin</th>
+                                            <th>Juillet</th>
+                                            <th>Août</th>
+                                            <th>Septembre</th>
+                                            <th>Octobre</th>
+                                            <th>Min</th>
+                                            <th>Max</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for key,i in table_2021.items %}
+                                            <tr>
+                                                <td>{{ i.type_declaration }}</td>
+                                                <td>{{ i.1 }}</td>
+                                                <td>{{ i.2 }}</td>
+                                                <td>{{ i.3 }}</td>
+                                                <td>{{ i.4 }}</td>
+                                                <td>{{ i.5 }}</td>
+                                                <td>{{ i.6 }}</td>
+                                                <td>{{ i.7 }}</td>
+                                                <td>{{ i.8 }}</td>
+                                                <td>{{ i.9 }}</td>
+                                                <td>{{ i.10 }}</td>
+                                                <td>{{ i.valeur_min }}</td>
+                                                <td>{{ i.valeur_max }}</td>
+                                                
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+</div>   
+</div>
+   
+{% endblock %}

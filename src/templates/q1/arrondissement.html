@@ -1,0 +1,56 @@
+{% extends 'generic.html' %}
+{% load static %}
+{% block title %}Arrondissement{% endblock %}
+{% block titrepage %} Arrondissement {% endblock %}
+{% block titreQuestion %}Quelles sont les années pour lesquelles il y a le plus / le moins d'anomalies signalées par arrondissement ?{% endblock %}
+{% block main %}
+{% load static %}
+<li><a href="{% url 'index_q1' %}">RETOUR</a></li>
+<div class="d-flex justify-content-center mt-5">
+    <section class="nav_page col-3 mx-5">
+        <h2 class="text-center fs-4">Les arrondissements</h2>
+        <ul>
+            {% for cle, valeur in table.items %}
+                <li class="d-flex justify-content-center my-2">
+                    <a href="{% url 'arrondissement' cle|add:1 %}" class="">Arrondissement {{ cle |add:1 }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+    <section class="col-9">
+        <article class="d-flex ">
+            <div class="img_cam"> {% load static %}
+                <img src="{% static 'img/q1/'|add:h_img %}" alt="">
+            </div>
+            <div class="img_hist col-6 mt-2">
+                <img src="{% static 'img/q1/'|add:c_img %}" alt="Camember" class="col-12">
+            </div>
+        </article>
+        <ul>
+            {% for cle, valeur in ligne.items %}
+                <li>Min: {{ valeur.2020 }} réalisés en 2020</li>
+                <li>Max: {{ valeur.2021 }} réalisés en 2021</li>
+            {% endfor %}
+        </ul>
+        <article>
+
+           
+            
+        </article>
+    </section>
+
+</div>
+   
+
+{% endblock %}
+ {# <h1>Question 1 : Min et max par annÃ©e</h1> #}
+ <div class="flex-left justify-content-between">
+
+    {% for i in arrondissements %}
+        <a href="{% url 'arrondissement' i %}" class="fs-4">arrondissement {{ i }}</a>
+    {% endfor %}
+
+</div>
+    
+<h1 class='text-center'>arrondissement {{ id }} <br><br>{{ arrond }}</h1>
+{{ arrond }}

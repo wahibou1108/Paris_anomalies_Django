@@ -1,0 +1,97 @@
+{% extends 'generic.html' %}
+{% load static %}
+{% block title %}TYPE D'anomalie par arrondissement{% endblock %}
+{% block titrepage %} Question 3 {% endblock %}
+{% block titreQuestion %}Quel(s) arrondissement(s) comportent le plus / le moins d’anomalies signalées, par type d’anomalie ?
+{% endblock %}
+{% block main %}
+<p><a href="{% url 'index_q3' %}">RETOUR</a></p>
+    <h1 class="text-center"></h1>
+    {% for key,i in donnee.items %}
+      <h2 class="text-center">{{ i.type_declaration }}</h2>
+    {% endfor %}
+    
+    <table class="table container">
+      <thead>
+        <tr>
+          <th scope="col">Arrondissements</th>
+          {% for arrondissement in arrondissements %}
+            <th scope="col">{{ arrondissement }}</th>
+          {% endfor %}
+          <th scope="col">Min</th>
+          <th scope="col">Max</th>
+ 
+
+        </tr>
+      </thead>
+      <tbody>
+        {% for key,i in donnee.items %}
+        <tr>
+          <td>Nombre d'anomalies signalées</td>
+          <td>{{ i.1 }}</td>
+          <td>{{ i.2 }}</td>
+          <td>{{ i.3 }}</td>
+          <td>{{ i.4 }}</td>
+          <td>{{ i.5 }}</td>
+          <td>{{ i.6 }}</td>
+          <td>{{ i.7 }}</td>
+          <td>{{ i.8 }}</td>
+          <td>{{ i.9 }}</td>
+          <td>{{ i.10 }}</td>
+          <td>{{ i.11 }}</td>
+          <td>{{ i.12 }}</td>
+          <td>{{ i.13 }}</td>
+          <td>{{ i.14 }}</td>
+          <td>{{ i.15 }}</td>
+          <td>{{ i.16 }}</td>
+          <td>{{ i.17 }}</td>
+          <td>{{ i.18 }}</td>
+          <td>{{ i.19 }}</td>
+          <td>{{ i.20 }}</td>
+          <td>{{ i.min }}</td>
+          <td>{{ i.max }}</td>
+      
+
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+
+<section class="col-9 container">
+    <article class="d-flex flex-wrap">
+      <div class="img_q3 col-4"> 
+        {% load static %}
+        <img src="{% static 'img/q3/'|add:h_img_q3_0 %}" alt="">
+      </div>  
+      <div class="img_q3 col-4"> 
+        {% load static %}
+        <img src="{% static 'img/q3/'|add:h_img_q3_1 %}" alt="" class="">
+      </div>  
+      <div class="img_q3 col-4"> 
+        {% load static %}
+        <img src="{% static 'img/q3/'|add:h_img_q3_2 %}" alt="">
+      </div>
+      <div class="img_q3 col-4"> 
+        {% load static %}
+        <img src="{% static 'img/q3/'|add:h_img_q3_3 %}" alt="">
+      </div>
+      <div class="img_q3 col-4"> 
+        {% load static %}
+        <img src="{% static 'img/q3/'|add:h_img_q3_4 %}" alt="">
+      </div>
+      <div class="img_q3 col-4 d-flex align-items-center"> 
+        <ul>
+          {% for key,i in donnee.items %}
+              <li>Min : {{min}} réalisés dans l'arrondissement {{ i.min }}  </li>
+              <li>Max : {{max}} réalisés dans l'arrondissement {{ i.max }}  </li>
+            {% endfor %}
+        </ul>
+      </div>
+          
+    </article>
+</section>
+
+
+  
+{% endblock %}
